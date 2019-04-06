@@ -19,8 +19,8 @@ do {                                                        	\
 
 #ifdef COTOMETR_DEBUG_LOG
 
-#define CREATE_DEBUG_LOG()				                    	\
-String last_deb_log_str;			                	        \
+#define CREATE_DEBUG_LOG()                                      \
+String last_deb_log_str;                                        \
 
 #define ADD_TO_DEBUG_LOG(value)                                	\
 do {                                                        	\
