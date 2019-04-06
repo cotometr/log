@@ -36,7 +36,13 @@ const String& get_debug_log() const                             \
 
 #else
 #define CREATE_DEBUG_LOG()
-#define ADD_TO_LOG(value)
-#define GET_DEBUG_LOG()
+#define ADD_TO_DEBUG_LOG(value)
+
+#define GET_DEBUG_LOG()                                         \
+const String& get_debug_log() const                             \
+{                                                               \
+    return "";                                                  \
+}                                                               \
+
 #endif
 
