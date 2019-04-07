@@ -1,5 +1,7 @@
 #pragma once
 
+#include <WString.h>
+
 // uncomment what needs to be printed
 //#define COTOMETR_DEBUG_LOG
 
