@@ -31,7 +31,7 @@ do {                                                        	\
 }while(0)
 
 #define COTOMETR_LOG_GET_DEBUG()                                \
-const String& COTOMETR_LOG_GET_DEBUG() const                    \
+const String& get_log_debug() const                             \
 {                                                               \
     return last_deb_log_str;                                    \
 }                                                               \
@@ -41,7 +41,7 @@ const String& COTOMETR_LOG_GET_DEBUG() const                    \
 #define COTOMETR_LOG_ADD_DEBUG(value)
 
 #define COTOMETR_LOG_GET_DEBUG()                                \
-const String& get_log_debug() const                    \
+const String& get_log_debug() const                             \
 {                                                               \
     return "";                                                  \
 }                                                               \
