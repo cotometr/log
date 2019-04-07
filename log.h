@@ -8,40 +8,40 @@
 #if defined(COTOMETR_DEBUG_LOG) || defined(COTOMETR_ERROR_LOG)
 
 // write this in the private section of the class
-#define CLEAR_LOG()                                         	\
+#define COTOMETR_LOG_CLEAR()                                    \
 do {                                                        	\
      this->last_deb_log_str = String(__FUNCTION__)              \
                               + " is called\n";                 \
 }while(0)
 
 #else
-#define CLEAR_LOG()
+#define COTOMETR_LOG_CLEAR()
 #endif
 
 
 #ifdef COTOMETR_DEBUG_LOG
 
-#define CREATE_DEBUG_LOG()                                      \
+#define COTOMETR_LOG_CREATE_DEBUG()                             \
 String last_deb_log_str;                                        \
 
-#define ADD_TO_DEBUG_LOG(value)                                	\
+#define COTOMETR_LOG_ADD_DEBUG(value)                           \
 do {                                                        	\
      this->last_deb_log_str += String(__FUNCTION__) + ":"       \
                             + __LINE__ + " " + (value) + "\n";  \
 }while(0)
 
-#define GET_DEBUG_LOG()                                         \
-const String& get_debug_log() const                             \
+#define COTOMETR_LOG_GET_DEBUG()                                \
+const String& COTOMETR_LOG_GET_DEBUG() const                    \
 {                                                               \
     return last_deb_log_str;                                    \
 }                                                               \
 
 #else
-#define CREATE_DEBUG_LOG()
-#define ADD_TO_DEBUG_LOG(value)
+#define COTOMETR_LOG_CREATE_DEBUG()
+#define COTOMETR_LOG_ADD_DEBUG(value)
 
-#define GET_DEBUG_LOG()                                         \
-const String& get_debug_log() const                             \
+#define COTOMETR_LOG_GET_DEBUG()                                \
+const String& get_log_debug() const                    \
 {                                                               \
     return "";                                                  \
 }                                                               \
