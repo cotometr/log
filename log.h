@@ -43,7 +43,8 @@ const String& get_log_debug() const                             \
 #define COTOMETR_LOG_GET_DEBUG()                                \
 const String& get_log_debug() const                             \
 {                                                               \
-    return "";                                                  \
+    static String empty;                                        \
+    return empty;                                               \
 }                                                               \
 
 #endif
